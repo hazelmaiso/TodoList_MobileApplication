@@ -1,0 +1,17 @@
+<ion-view view-title="Todo Task" ng-controller="ListCtrl">
+    <ion-content>
+      <ion-list>
+        <ion-item class="item-remove-animate item-icon-right" href="#/edit/{{note.id}}" ng-repeat="note in notes track by note.id">
+          <h2>{{note.title}}</h2>
+          <i class="icon ion-chevron-left"></i>
+          <ion-option-button class="button-positive icon-left ion-trash-b" ng-click="remove(note.id)">Delete</ion-option-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <div class="bar bar-footer bar-stable">
+      <a href="#/add" class="button button-balanced icon-left ion-compose">
+        Add
+      </a>
+    </div>
+  </ion-view>
+  
